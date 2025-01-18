@@ -1,14 +1,13 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
+import Curd from "./Page/Curd";
+import Login from "./Page/Login";
+import Registration from "./Page/Registration ";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
-      <div>Taliwind</div>
+      <Registration />
+      <Login />
+      <Curd />
     </>
   );
 }
