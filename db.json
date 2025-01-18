@@ -1,0 +1,49 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "johndoe",
+      "password": "johndoe123",
+      "email": "john.doe@example.com",
+      "fullname": "John Doe",
+      "mobile": "123-456-7890",
+      "country": "US"
+    },
+    {
+      "id": 2,
+      "username": "janesmith",
+      "password": "janesmith123",
+      "email": "jane.smith@example.com",
+      "fullname": "Jane Smith",
+      "mobile": "234-567-8901",
+      "country": "Canada"
+    },
+    {
+      "id": 3,
+      "username": "alexbrown",
+      "password": "alexbrown123",
+      "email": "alex.brown@example.com",
+      "fullname": "Alex Brown",
+      "mobile": "345-678-9012",
+      "country": "UK"
+    },
+    {
+      "id": 4,
+      "username": "emilywhite",
+      "password": "emilywhite123",
+      "email": "emily.white@example.com",
+      "fullname": "Emily White",
+      "mobile": "456-789-0123",
+      "country": "Australia"
+    },
+    {
+      "id": 5,
+      "username": "davidlee",
+      "password": "davidlee123",
+      "email": "david.lee@example.com",
+      "fullname": "David Lee",
+      "mobile": "567-890-1234",
+      "country": "India"
+    }
+  ]
+}
