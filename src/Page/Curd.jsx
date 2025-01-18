@@ -6,7 +6,7 @@ export default function Curd() {
 
   useEffect(() => {
     axios
-      .get("https://react-interview.crd4lc.easypanel.host/api/login")
+      .get("https://react-interview.crd4lc.easypanel.host/api/")
       .then((response) => {
         setData(response.data);
       })

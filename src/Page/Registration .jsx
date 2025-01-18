@@ -2,20 +2,18 @@ import { useState } from "react";
 import axios from "axios";
 
 export default function Register() {
-  const [formData, setFormData] = useState([
-    {
-      name: "",
-      email: "",
-      password: "",
-    },
-  ]);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    password: "",
+  });
   const [error, setError] = useState(null);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
-  console.log(formData);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -24,14 +22,14 @@ export default function Register() {
         formData
       );
 
-      if (response.ok) {
+      if (response.status === 200) {
         alert("Registration successful!");
       } else {
-        setError("Failed to register. Try again.");
+        setError("Failed to register. Please try again.");
       }
     } catch (err) {
-      console.log(err);
-      setError("Network error. Try again later.");
+      console.error(err);
+      setError("Network error. Please try again later.");
     }
   };
 
@@ -44,7 +42,7 @@ export default function Register() {
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
             <label
-              htmlFor="fullname"
+              htmlFor="name"
               className="block text-sm font-medium text-gray-600"
             >
               Full Name
@@ -54,13 +52,12 @@ export default function Register() {
               id="name"
               name="name"
               placeholder="Enter your full name"
-              value={formData.fullname}
+              value={formData.name}
               onChange={handleChange}
               required
               className="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
             />
           </div>
-
           <div>
             <label
               htmlFor="email"
